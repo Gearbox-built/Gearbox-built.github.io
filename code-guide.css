@@ -1,0 +1,344 @@
+---
+layout: nil
+---
+
+/*
+* Fonts
+*/
+
+@font-face {
+  font-family: "ITC Blair W01 Condensed";
+  font-weight: 700;
+  src: url("font/itc/33da35b8-91ab-4fd6-b53e-fd781b1a57e3.eot?#iefix");
+  src: url("font/itc/33da35b8-91ab-4fd6-b53e-fd781b1a57e3.eot?#iefix") format("eot"),
+       url("font/itc/e026817f-1ff1-4ac8-ae7c-a797ef66d184.woff2") format("woff2"),
+       url("font/itc/5085eaf2-878e-428d-a4bc-4bf1a2368f04.woff") format("woff"),
+       url("font/itc/a0683b5c-fd26-464c-acb3-4fe56a41ac23.ttf") format("truetype"),
+       url("font/itc/c15af296-6a81-454d-97a2-f5c81bb9ea4c.svg#c15af296-6a81-454d-97a2-f5c81bb9ea4c") format("svg");
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello/fontello.eot');
+  src: url('font/fontello/fontello.eot#iefix') format('embedded-opentype'),
+       url('font/fontello/fontello.woff') format('woff'),
+       url('font/fontello/fontello.ttf') format('truetype'),
+       url('font/fontello/fontello.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.icon-github-circled:before { content: '\e800'; } /* '' */
+.icon-twitter:before { content: '\e801'; } /* '' */
+
+
+/*
+ * Scaffolding and type
+ */
+
+html {
+  font-size: 16px;
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  background-color: #f8f2e4;
+  margin: 0;
+  font: 1rem/1.5 "PT Sans", sans-serif;
+  color: #1a1b1b;
+}
+
+a {
+  color: #1a1b1b;
+  text-decoration: none;
+  position: relative;
+  transition: color 125ms linear;
+}
+a:hover {
+  color: #E06C75;
+}
+
+p a,
+li a {
+  color: #1a1b1b;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  z-index: 1;
+}
+p a::before,
+p a::after,
+li a::before,
+li a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+p a::before,
+li a::before {
+  top: 0;
+  bottom: 0;
+  background: #fff184;
+  transform: translateX(-100%);
+  transition: transform 125ms linear;
+  z-index: -1;
+}
+p a::after,
+li a::after {
+  bottom: 0.35em;
+  height: 1px;
+  background: #1a1b1b;
+  transform: translateX(0%);
+  transition: transform 125ms linear;
+}
+p a:hover,
+li a:hover {
+  color: #1a1b1b;
+}
+p a:hover::before,
+li a:hover::before {
+  transform: translateX(0%);
+}
+p a:hover::after,
+li a:hover::after {
+  transform: translateX(100%);
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 .5rem;
+  font-family: 'ITC Blair W01 Condensed', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: .125em;
+  line-height: 1;
+  text-transform: lowercase;
+  color: #1a1b1b;
+}
+h1 { font-size: 3.8125rem; }
+h2 { font-size: 2.875rem; }
+h3 { font-size: 1.625rem; }
+h4 { font-size: 1.3125rem }
+
+p {
+  margin: 0 0 1rem;
+}
+.lead {
+  font-size: 1.3rem;
+}
+
+blockquote {
+  position: relative;
+  margin: 0 1rem 1rem;
+  font-style: italic;
+  color: #7a7a7a;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+
+ul li {
+  margin-bottom: .25rem;
+}
+
+/* Tighten up margin on last items */
+p:last-child,
+ul:last-child,
+blockquote:last-child{
+  margin-bottom: 0;
+}
+
+
+
+/*
+ * Code
+ */
+
+code,
+pre {
+  font-family: "Fira Mono", Menlo, "Courier New", monospace;
+  font-size: 95%;
+}
+code {
+  padding: 3px 6px;
+  font-size: 85%;
+  color: #e16b72;
+  background-color: #2a2b2b;
+  border-radius: .2rem;
+}
+
+pre {
+  display: block;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+pre code {
+  color: #f8f2e2;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+.highlight {
+  margin: 0;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+.highlight + .highlight {
+  margin-top: 1rem;
+}
+
+
+/*
+ * The Grid
+ */
+
+.col {
+  padding: 2rem 1rem;
+}
+.col p {
+  max-width: 40rem;
+}
+.col + .col {
+  border-top: 1px solid #44423e;
+  background-color: #252727;
+}
+@media (min-width: 38em) {
+  .col {
+    padding: 2rem;
+  }
+}
+@media (min-width: 48em) {
+  .section {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .col {
+    display: table-cell;
+    padding: 3rem;
+    vertical-align: top;
+  }
+  .col + .col {
+    border-top: 0;
+  }
+}
+
+/* Make the ToC a whole section */
+.toc .col + .col {
+  background-color: #f8f2e4;
+}
+
+
+/*
+ * Masthead
+ */
+
+.masthead {
+  padding: 3rem 1rem;
+  color: rgba(255,255,255,.5);
+  text-align: center;
+  background-color: #1a1b1b;
+}
+.masthead h1 {
+  color: #fff;
+  margin-bottom: .25rem;
+}
+.masthead .icon {
+  display: inline-block;
+  font-size: 3rem;
+  margin: 0 .5rem;
+}
+.masthead-links {
+  font-size: 2rem;
+}
+.masthead-links a {
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+  transition: all .15s linear;
+}
+.masthead-links a:hover {
+  color: #fff;
+}
+
+@media (min-width: 38em) {
+  .masthead {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+
+/*
+ * Sections
+ */
+
+.heading {
+  padding: 2rem 1rem 1.5rem;
+  background-color: #1a1b1b;
+}
+.heading > h2 {
+  color: #f8f2e4;
+}
+
+@media (min-width: 38em) {
+  .heading {
+    padding: 3rem 3rem 2.5rem;
+  }
+}
+
+.section {
+  border-bottom: 1px solid #44423e;
+}
+
+
+/*
+ * Footer
+ */
+
+.footer {
+  padding: 3rem 1rem;
+  font-size: 90%;
+  text-align: center;
+}
+.footer p {
+  margin-bottom: .5rem;
+}
+
+.quick-links {
+  list-style: none;
+  margin-left: 0;
+}
+.quick-links li {
+  display: inline;
+}
+
+
+/*
+ * Syntax highlighting
+ */
+
+{% include syntax.css %}
+{% include ads.css %}
