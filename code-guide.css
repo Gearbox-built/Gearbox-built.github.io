@@ -52,10 +52,11 @@ layout: nil
 
 html {
   font-size: 16px;
+  -webkit-font-smoothing: antialiased
 }
 @media (min-width: 48em) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -127,18 +128,22 @@ li a:hover::after {
 }
 
 h1, h2, h3, h4 {
-  margin: 0 0 .5rem;
+  margin: 0 0 1rem;
   font-family: 'ITC Blair W01 Condensed', Helvetica, Arial, sans-serif;
   font-weight: normal;
-  letter-spacing: .125em;
+  letter-spacing: .1em;
   line-height: 1;
   text-transform: lowercase;
   color: #1a1b1b;
 }
-h1 { font-size: 3.8125rem; }
+h1 { font-size: 3rem; }
 h2 { font-size: 2.875rem; }
 h3 { font-size: 1.625rem; }
 h4 { font-size: 1.3125rem }
+
+@media (min-width: 38em) {
+  h1 { font-size: 4rem; }
+}
 
 p {
   margin: 0 0 1rem;
@@ -177,12 +182,11 @@ blockquote:last-child{
 code,
 pre {
   font-family: "Fira Mono", Menlo, "Courier New", monospace;
-  font-size: 95%;
 }
 code {
   padding: 3px 6px;
-  font-size: 85%;
-  color: #e16b72;
+  font-size: 16px;
+  color: #f8f2e2;
   background-color: #2a2b2b;
   border-radius: .2rem;
 }
@@ -262,9 +266,14 @@ pre code {
   text-align: center;
   background-color: #1a1b1b;
 }
+.masthead .logo {
+  fill: #f8f2e4;
+  max-width: 9.375rem;
+  margin-bottom: 2rem;
+}
 .masthead h1 {
-  color: #fff;
-  margin-bottom: .25rem;
+  color: #f8f2e4;
+  margin-bottom: 0;
 }
 .masthead .icon {
   display: inline-block;
@@ -274,19 +283,21 @@ pre code {
 .masthead-links {
   font-size: 2rem;
 }
-.masthead-links a {
+/* .masthead-links a {
   color: rgba(255,255,255,.5);
   text-decoration: none;
   transition: all .15s linear;
 }
 .masthead-links a:hover {
   color: #fff;
-}
+} */
 
 @media (min-width: 38em) {
   .masthead {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: 4rem 3rem;
+  }
+  .masthead .logo {
+    margin-bottom: 3rem;
   }
 }
 
@@ -296,16 +307,15 @@ pre code {
  */
 
 .heading {
-  padding: 2rem 1rem 1.5rem;
-  background-color: #1a1b1b;
-}
-.heading > h2 {
   color: #f8f2e4;
+  margin: 0;
+  padding: 2rem 1rem 2.5rem;
+  background-color: #1a1b1b;
 }
 
 @media (min-width: 38em) {
   .heading {
-    padding: 3rem 3rem 2.5rem;
+    padding: 3rem 3rem 3.5rem;
   }
 }
 
