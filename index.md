@@ -5,7 +5,7 @@ layout: default
 {::options parse_block_html="true" /}
 
 {% comment %}
-  TODO: Switch to loop through collections
+  TODO: Update to HTML for nesting
 {% endcomment %}
 
 {% assign collections = site.collections | sort: "order" %}
