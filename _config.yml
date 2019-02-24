@@ -4,3 +4,56 @@ url:           http://codeguide.co
 
 permalink:     pretty
 highlighter:   rouge
+
+collections:
+  html:
+    order: 10
+  css:
+    order: 20
+  js:
+    order: 30
+  liquid:
+    order: 40
+  php:
+    order: 50
+  git:
+    order: 60
+collections_dir: standards
+
+defaults:
+  - scope:
+      path: ""
+      type: "html"
+    values:
+      topic: html
+      language: html
+  - scope:
+      path: ""
+      type: "css"
+    values:
+      topic: css
+      language: scss
+  - scope:
+      path: ""
+      type: "js"
+    values:
+      topic: js
+      language: js
+  - scope:
+      path: ""
+      type: "liquid"
+    values:
+      topic: liquid
+      language: liquid
+  - scope:
+      path: ""
+      type: "php"
+    values:
+      topic: php
+      language: php
+  - scope:
+      path: ""
+      type: "git"
+    values:
+      topic: git
+      language: git

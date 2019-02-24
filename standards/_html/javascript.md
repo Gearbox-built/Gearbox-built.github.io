@@ -1,0 +1,7 @@
+---
+order: 110
+---
+
+### JavaScript generated markup
+
+Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.

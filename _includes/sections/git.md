@@ -1,15 +1,10 @@
-{% if include.folder %}
-  {% assign base = include.folder %}
-{% else %}
-  {% assign base = "git" %}
-{% endif %}
-{% assign standards = "standards/" | append: base | append: "/" | append: include.section | append: ".md" %}
-{% assign code = base | append: "/" | append: include.section | append: ".txt" %}
-{% assign id = base | append: "-" | append: include.section %}
+{% assign base = section.topic %}
+{% assign code = base | append: "/" | append: section.slug | append: ".txt" %}
+{% assign id = base | append: "-" | append: section.slug %}
 
 <div class="section" id="{{ id }}">
 <div class="col">
-{% include {{ standards }} %}
+  {{ section.content }}
 </div>
 {% capture fileExists %}{% file_exists {{ "_includes/" | append: code }} %}{% endcapture %}
 {% if fileExists=="true" %}

@@ -1,3 +1,8 @@
+---
+order: 140
+language: html
+---
+
 ### Don't use `@import`
 
 Compared to `<link>`s, `@import` is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:

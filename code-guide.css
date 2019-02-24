@@ -250,6 +250,18 @@ pre code {
   }
 }
 
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+}
+.toc .col {
+  box-sizing: border-box;
+  flex-basis: 25%;
+}
+.toc ul {
+  padding-left: 1rem;
+}
+
 /* Make the ToC a whole section */
 .toc .col + .col {
   background-color: #f8f2e4;
