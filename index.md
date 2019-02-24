@@ -39,17 +39,55 @@ layout: default
 {: .heading #css}
 ## CSS
 
-{% include sections/css.md section="syntax" %}
-{% include sections/css.md section="declaration-order" %}
-{% include sections/html.md section="import" folder="css" %}
-{% include sections/css.md section="media-queries" %}
-{% include sections/css.md section="prefixed-properties" %}
-{% include sections/css.md section="single-declarations" %}
-{% include sections/css.md section="shorthand" %}
+{% include sections/scss.md section="syntax" %}
+{% include sections/scss.md section="selectors" %}
 {% include sections/scss.md section="nesting" %}
+{% include sections/scss.md section="variables" %}
+{% include sections/scss.md section="includes-extends" %}
+{% include sections/scss.md section="comments" %}
+{% include sections/scss.md section="media-queries" %}
+{% include sections/scss.md section="single-declarations" %}
+{% include sections/scss.md section="shorthand" %}
+{% include sections/scss.md section="classes" %}
+{% include sections/scss.md section="organization" %}
+{% include sections/scss.md section="maintainability" %}
+{% include sections/scss.md section="declaration-order" %}
+
+{% comment %}
+{% include sections/html.md section="import" folder="css" %}
+{% include sections/scss.md section="prefixed-properties" %}
 {% include sections/scss.md section="operators" %}
-{% include sections/css.md section="comments" %}
-{% include sections/css.md section="classes" %}
-{% include sections/css.md section="selectors" %}
-{% include sections/css.md section="organization" %}
-{% include sections/css.md section="editor-prefs" %}
+{% endcomment %}
+
+{% include sections/scss.md section="editor-prefs" %}
+
+{: .heading #liquid}
+## Liquid
+
+{% include sections/liquid.md section="intro" %}
+{% include sections/liquid.md section="syntax" %}
+{% include sections/liquid.md section="whitespace" %}
+{% include sections/liquid.md section="variables" %}
+{% include sections/liquid.md section="debugging" %}
+
+{: .heading #php}
+## PHP
+
+{% include sections/php.md section="intro" %}
+{% include sections/php.md section="basics" %}
+{% include sections/php.md section="namespace" %}
+{% include sections/php.md section="methods" %}
+{% include sections/php.md section="control" %}
+{% include sections/php.md section="closures" %}
+
+{: .heading #git}
+## Git
+
+{% include sections/git.md section="intro" %}
+{% include sections/git.md section="repos" %}
+{% include sections/git.md section="setup" %}
+{% include sections/git.md section="branches" %}
+{% include sections/git.md section="commits" %}
+{% include sections/git.md section="pushing" %}
+{% include sections/git.md section="merging" %}
+{% include sections/git.md section="tagging" %}

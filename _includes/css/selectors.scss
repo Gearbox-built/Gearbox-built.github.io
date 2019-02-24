@@ -1,0 +1,7 @@
+/* Bad */
+#tasks-wrapper .tasks > div input[type="text"] { ... }
+.task-item .label { ... }
+
+/* Good */
+.task-item__edit-title { ... }
+.task-item__label { ... }

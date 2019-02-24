@@ -29,12 +29,12 @@
  .na { color: #D19A66 } /* Name.Attribute */
  .nb { color: #F8F2E4 } /* Name.Builtin */
  .nc { color: #D19A66; } /* Name.Class */
- /* NONE */ .no { color: #006699 } /* Name.Constant */
- .nd { color: #ABB2BF } /* Name.Decorator */
+ .no { color: #D19A66 } /* Name.Constant */
+ .nd { color: #D19A66 } /* Name.Decorator */
  /* NONE */ .ni { color: #999999; } /* Name.Entity */
  /* NONE */ .ne { color: #DE3121; } /* Name.Exception */
- .nf { color: #EBEBFF } /* Name.Function */
- .nl { color: #ABB2BF } /* Name.Label */
+ .nf { color: #E5C07B } /* Name.Function */
+ .nl { color: #E5C07B } /* Name.Label */
  .nn { color: #E5C07B; } /* Name.Namespace */
  .nt { color: #E06C75; } /* Name.Tag */
  .nv { color: #ff9057 } /* Name.Variable */

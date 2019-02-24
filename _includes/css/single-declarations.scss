@@ -1,0 +1,12 @@
+/* Multiple declarations, one per line */
+.sprite {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(../img/sprite.png);
+}
+
+/* Single declarations, one per line too! */
+.icon {
+  background-position: 0 0;
+}

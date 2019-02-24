@@ -1,0 +1,18 @@
+{% raw %}
+<!-- Good -->
+{% assign some_boolean = true %}
+{% capture some_string %}This is a string.{% endcapture %}
+
+<!-- Bad -->
+{% assign some-boolean = true %}
+{% assign pleaseNo = true %}
+{% capture sillyString %}This is a string.{% endcapture %}
+
+<!-- Move verbose logic into a variable -->
+{% assign slides_class = 'no-slides' %}
+{% if settings.slide_1 or settings.slide_2 or settings.slide_3 or settings.slide_4 or settings.slide_5 %}
+  {% assign slides_class = 'has-slides' %}
+{% endif %}
+
+<body class="{{ slides_class }}">
+{% endraw %}

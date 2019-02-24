@@ -3,4 +3,4 @@ description:   Standards for developing flexible, durable, and sustainable HTML 
 url:           http://codeguide.co
 
 permalink:     pretty
-pygments:      true
+highlighter:   rouge

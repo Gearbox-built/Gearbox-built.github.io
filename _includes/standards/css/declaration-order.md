@@ -1,5 +1,7 @@
 ### Declaration order
 
+**Recommended** only. During the course of development this might not be realistic. Try to keep the following recommendations in mind.
+
 Related property declarations should be grouped together following the order:
 
 1.  Positioning

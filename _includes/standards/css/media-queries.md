@@ -1,3 +1,5 @@
 ### Media query placement
 
-Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.
+Place media queries inside their respective selector. Don't have entire blocks of code dedicated to a single media query.
+
+Feel free to create a media query mixin to simplify modifying your queries.
