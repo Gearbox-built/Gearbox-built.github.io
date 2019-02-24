@@ -36,6 +36,7 @@ layout: default
 {% include sections/html.md section="javascript" %}
 
 
+
 {: .heading #css}
 ## CSS
 
@@ -61,6 +62,8 @@ layout: default
 
 {% include sections/scss.md section="editor-prefs" %}
 
+
+
 {: .heading #liquid}
 ## Liquid
 
@@ -69,6 +72,8 @@ layout: default
 {% include sections/liquid.md section="whitespace" %}
 {% include sections/liquid.md section="variables" %}
 {% include sections/liquid.md section="debugging" %}
+
+
 
 {: .heading #php}
 ## PHP
@@ -79,6 +84,8 @@ layout: default
 {% include sections/php.md section="methods" %}
 {% include sections/php.md section="control" %}
 {% include sections/php.md section="closures" %}
+
+
 
 {: .heading #git}
 ## Git
