@@ -10,14 +10,16 @@ collections:
     order: 10
   css:
     order: 20
-  js:
+  javascript:
     order: 30
-  liquid:
-    order: 40
   php:
+    order: 40
+  sage:
     order: 50
-  git:
+  liquid:
     order: 60
+  git:
+    order: 70
 collections_dir: standards
 
 defaults:
@@ -35,22 +37,28 @@ defaults:
       language: scss
   - scope:
       path: ""
-      type: "js"
+      type: "javascript"
     values:
-      topic: js
-      language: js
-  - scope:
-      path: ""
-      type: "liquid"
-    values:
-      topic: liquid
-      language: liquid
+      topic: javascript
+      language: javascript
   - scope:
       path: ""
       type: "php"
     values:
       topic: php
       language: php
+  - scope:
+      path: ""
+      type: "sage"
+    values:
+      topic: sage
+      language: php
+  - scope:
+      path: ""
+      type: "liquid"
+    values:
+      topic: liquid
+      language: liquid
   - scope:
       path: ""
       type: "git"
