@@ -7,7 +7,7 @@ Foo::bar($arg2, $arg3);
 
 // also good
 $foo->bar(
-  $longArgument,
-  $longerArgument,
-  $muchLongerArgument
+    $longArgument,
+    $longerArgument,
+    $muchLongerArgument
 );

@@ -1,0 +1,23 @@
+<!-- Bad -->
+@php
+  setup_postdata($post);
+@endphp
+
+<!-- Good -->
+@setup_postdata
+
+<!-- Bad -->
+@php
+  $events = get_posts([
+    'post_type' => 'event',
+  ]);
+@endphp
+
+@foreach ($events as $event)
+  ...
+@endforeach
+
+<!-- Good -->
+@foreach (Event::fetchAll() as $event)
+  ...
+@endforeach

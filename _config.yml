@@ -52,7 +52,7 @@ defaults:
       type: "sage"
     values:
       topic: sage
-      language: php
+      language: html
   - scope:
       path: ""
       type: "liquid"
