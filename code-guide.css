@@ -162,8 +162,16 @@ blockquote p {
   margin-bottom: 0;
 }
 
-ul li {
-  margin-bottom: .25rem;
+ul li,
+ol li {
+  margin-bottom: 0.25rem;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-top: 0.25rem;
 }
 
 /* Tighten up margin on last items */
@@ -184,10 +192,12 @@ pre {
   font-family: "Fira Mono", Menlo, "Courier New", monospace;
 }
 code {
-  padding: 3px 6px;
+  padding: 2px 5px;
   font-size: 16px;
-  color: #f8f2e2;
-  background-color: #2a2b2b;
+  background-color: #ece5d0;
+  color: #8e4d0d;
+  /* color: #f8f2e2; */
+  /* background-color: #2a2b2b; */
   border-radius: .2rem;
 }
 

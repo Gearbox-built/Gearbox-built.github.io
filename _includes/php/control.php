@@ -1,6 +1,6 @@
 <?php
 
-// great
+// Great
 if ($expr1) {
   // if body
 } elseif ($expr2) {
@@ -10,12 +10,12 @@ if ($expr1) {
 }
 
 
-// terrific
+// Terrific
 foreach ($iterable as $key => $value) {
   // foreach body
 }
 
-// superb
+// Superb
 switch ($expr) {
   case 0:
     echo 'First case, with a break';
