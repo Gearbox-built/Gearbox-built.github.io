@@ -4,6 +4,13 @@ url:           http://codeguide.co
 
 permalink:     pretty
 highlighter:   rouge
+destination:   docs
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
 
 collections:
   html:
