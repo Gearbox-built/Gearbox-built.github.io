@@ -17,7 +17,7 @@ function scrollToY(scrollTargetY, speed, easing) {
 
   var scrollY = window.scrollY || document.documentElement.scrollTop,
       scrollTargetY = scrollTargetY || 0,
-      speed = speed || 2000,
+      speed = speed,
       easing = easing || 'easeOutSine',
       currentTime = 0;
 
@@ -68,6 +68,6 @@ for(var i = 0, len = anchors.length; i < len; i++) {
   anchors[i].onclick = function (e) {
     e.preventDefault();
     var target = document.getElementById(this.getAttribute("href").substring(1));
-    scrollToY(target.offsetTop, 1500, 'easeInOutQuint')
+    scrollToY(target.offsetTop, 100, 'easeInOutQuint');
   }
 }
