@@ -17,34 +17,6 @@ layout: nil
        url("../fonts/itc/c15af296-6a81-454d-97a2-f5c81bb9ea4c.svg#c15af296-6a81-454d-97a2-f5c81bb9ea4c") format("svg");
 }
 
-@font-face {
-  font-family: 'fontello';
-  src: url('../fonts/fontello/fontello.eot');
-  src: url('../fonts/fontello/fontello.eot#iefix') format('embedded-opentype'),
-       url('../fonts/fontello/fontello.woff') format('woff'),
-       url('../fonts/fontello/fontello.ttf') format('truetype'),
-       url('../fonts/fontello/fontello.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-}
-
-.icon-github-circled:before { content: '\e800'; } /* '' */
-.icon-twitter:before { content: '\e801'; } /* '' */
-
 
 /*
  * Scaffolding and type
@@ -236,8 +208,8 @@ pre code {
   max-width: 40rem;
 }
 .col + .col {
-  border-top: 1px solid #44423e;
-  background-color: #252727;
+  border-top: 1px solid #33322f;
+  background-color: #1a1b1b;
 }
 @media (min-width: 38em) {
   .col {
@@ -261,8 +233,11 @@ pre code {
 }
 
 .toc {
+  background-color: #f8f2e4;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 .toc .col {
   box-sizing: border-box;
@@ -297,11 +272,6 @@ pre code {
   color: #f8f2e4;
   margin-bottom: 0;
 }
-.masthead .icon {
-  display: inline-block;
-  font-size: 3rem;
-  margin: 0 .5rem;
-}
 .masthead-links {
   font-size: 2rem;
 }
@@ -333,6 +303,8 @@ pre code {
   margin: 0;
   padding: 2rem 1rem 2.25rem;
   background-color: #1a1b1b;
+  background-image: linear-gradient(to bottom right, #1a1b1b, #121313);
+  border-bottom: 1px solid #33322f;
 }
 
 @media (min-width: 38em) {
@@ -342,7 +314,7 @@ pre code {
 }
 
 .section {
-  border-bottom: 1px solid #44423e;
+  border-bottom: 1px solid #33322f;
 }
 
 
@@ -365,4 +337,34 @@ pre code {
 }
 .quick-links li {
   display: inline;
+}
+
+/* Scroll to top */
+.scroll-to-top {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  border: #d19a66 2px solid;
+  border-radius: 100%;
+  transition: border-color 0.2s ease;
+  z-index: 5;
+}
+.scroll-to-top .arrow {
+  line-height: 0;
+  transform: scaleY(-1);
+}
+.scroll-to-top .arrow svg {
+  fill: #d19a66;
+  transition: fill 0.2s ease;
+}
+.scroll-to-top:hover {
+  border-color: #a5672d;
+}
+.scroll-to-top:hover .arrow svg {
+  fill: #a5672d;
 }

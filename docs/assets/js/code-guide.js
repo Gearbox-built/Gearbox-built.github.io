@@ -60,9 +60,6 @@ function scrollToY(scrollTargetY, speed, easing) {
   tick();
 }
 
-// scroll it!
-scrollToY(0, 1500, 'easeInOutQuint');
-
 var anchors = document.getElementsByTagName('a');
 for(var i = 0, len = anchors.length; i < len; i++) {
   anchors[i].onclick = function (e) {
@@ -70,4 +67,9 @@ for(var i = 0, len = anchors.length; i < len; i++) {
     var target = document.getElementById(this.getAttribute("href").substring(1));
     scrollToY(target.offsetTop, 100, 'easeInOutQuint');
   }
+}
+
+var scrollToTop = document.getElementById('scroll-to-top');
+scrollToTop.onclick = function() {
+  scrollToY(0, 100, 'easeInOutQuint');
 }
