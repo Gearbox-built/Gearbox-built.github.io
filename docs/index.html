@@ -1519,28 +1519,18 @@
 <span class="c1">// Good</span>
 <span class="kd">const</span> <span class="nx">totalScore</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">reviewScore</span><span class="p">);</span>
 
-
 <span class="c1">// NUMBERS</span>
 <span class="kd">const</span> <span class="nx">inputValue</span> <span class="o">=</span> <span class="s1">'4'</span><span class="p">;</span>
 
 <span class="c1">// Bad</span>
 <span class="kd">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">);</span>
-
-<span class="c1">// Bad</span>
 <span class="kd">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="o">+</span><span class="nx">inputValue</span><span class="p">;</span>
-
-<span class="c1">// Bad</span>
 <span class="kd">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">inputValue</span> <span class="o">&gt;&gt;</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="c1">// Bad</span>
 <span class="kd">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">);</span>
 
 <span class="c1">// Good</span>
 <span class="kd">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">);</span>
-
-<span class="c1">// Good</span>
 <span class="kd">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-
 
 <span class="c1">// BOOLEANS</span>
 <span class="kd">const</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -1550,8 +1540,6 @@
 
 <span class="c1">// Good</span>
 <span class="kd">const</span> <span class="nx">hasAge</span> <span class="o">=</span> <span class="nb">Boolean</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span>
-
-<span class="c1">// Good</span>
 <span class="kd">const</span> <span class="nx">hasAge</span> <span class="o">=</span> <span class="o">!!</span><span class="nx">age</span><span class="p">;</span></code></pre></figure>
   </div>
 
@@ -1637,7 +1625,7 @@
 
 <div class="section" id="javascript-comments">
 <div class="col">
-  <h3 id="naming-conventions">Naming Conventions</h3>
+  <h3 id="comments">Comments</h3>
 
 <ul>
   <li>Use <code class="highlighter-rouge">/** ... */</code> for multi-line comments. Include a description, specify types and values for all parameters and return values.</li>
@@ -1704,7 +1692,7 @@
   <h3 id="destructuring">Destructuring</h3>
 
 <ul>
-  <li>Use array destructuring for arrays.</li>
+  <li>Use array destructuring for basic arrays.</li>
   <li>Use object destructuring when accessing and using multiple properties of an object.</li>
   <li>Use object destructuring for multiple return values, not array destructuring. You can add new properties over time or change the order of things without breaking call sites.</li>
 </ul>
@@ -1772,7 +1760,7 @@
 
 <div class="section" id="javascript-modules">
 <div class="col">
-  <h3 id="destructuring">Destructuring</h3>
+  <h3 id="modules">Modules</h3>
 
 <ul>
   <li>Always use modules (import/export) over a non-standard module system. You can always transpile to your preferred module system.</li>
@@ -1988,7 +1976,7 @@
   <li>Never name a parameter <code class="highlighter-rouge">arguments</code>. This will take precedence over the <code class="highlighter-rouge">arguments</code> object that is given to every function scope.</li>
   <li>Never use <code class="highlighter-rouge">arguments</code>, opt to use rest syntax <code class="highlighter-rouge">...</code> instead.</li>
   <li>Use default parameter syntax rather than mutating function arguments.</li>
-  <li>Use <code class="highlighter-rouge">Object#assign</code> or <code class="highlighter-rouge">jQuery#extend</code> to set default object values.</li>
+  <li>Use <code class="highlighter-rouge">Object#assign</code> to set default object values.</li>
 </ul>
 
 </div>
@@ -2057,12 +2045,16 @@
 
 
   <div class="col">
-  <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// LITERAL SYNTAX AND RESERVED WORDS</span>
+  <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// LITERAL SYNTAX / OBJECT METHOD SHORTHAND / RESERVED WORDS</span>
 <span class="c1">// Bad</span>
 <span class="kd">const</span> <span class="nx">superman</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">(</span>
   <span class="k">default</span><span class="p">:</span> <span class="p">{</span> <span class="nl">clark</span><span class="p">:</span> <span class="s1">'kent'</span> <span class="p">},</span>
   <span class="kr">private</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="kd">class</span><span class="p">:</span> <span class="s1">'alien'</span><span class="p">,</span>
+
+  <span class="nx">laserEyes</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">`</span><span class="p">${</span><span class="nx">target</span><span class="p">}</span><span class="s2"> is real dead`</span><span class="p">;</span>
+  <span class="p">},</span>
 <span class="p">);</span>
 
 <span class="c1">// Good</span>
@@ -2070,6 +2062,10 @@
   <span class="na">defaults</span><span class="p">:</span> <span class="p">{</span> <span class="na">clark</span><span class="p">:</span> <span class="s1">'kent'</span> <span class="p">},</span>
   <span class="na">hidden</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="na">type</span><span class="p">:</span> <span class="s1">'alien'</span><span class="p">,</span>
+
+  <span class="nx">laserEyes</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">`</span><span class="p">${</span><span class="nx">target</span><span class="p">}</span><span class="s2"> is real dead`</span><span class="p">;</span>
+  <span class="p">},</span>
 <span class="p">};</span>
 
 
@@ -2088,26 +2084,6 @@
 <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">name</span><span class="p">:</span> <span class="s1">'San Francisco'</span><span class="p">,</span>
   <span class="p">[</span><span class="nx">getKey</span><span class="p">(</span><span class="s1">'enabled'</span><span class="p">)]:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="p">};</span>
-
-
-<span class="c1">// OBJECT METHOD SHORTHAND</span>
-<span class="c1">// Bad</span>
-<span class="kd">const</span> <span class="nx">atom</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">value</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-
-  <span class="na">addValue</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">atom</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
-  <span class="p">},</span>
-<span class="p">};</span>
-
-<span class="c1">// Good</span>
-<span class="kd">const</span> <span class="nx">atom</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">value</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-
-  <span class="nx">addValue</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">atom</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
-  <span class="p">},</span>
 <span class="p">};</span>
 
 
@@ -2405,6 +2381,7 @@
 
   <div class="col">
   <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">FooInterface</span><span class="p">;</span>
@@ -2428,7 +2405,7 @@
 
     <span class="k">final</span> <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">bar</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="c1">// method body</span>
+        <span class="c1">// ...</span>
     <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
   </div>
@@ -2456,13 +2433,14 @@
 
   <div class="col">
   <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">FooClass</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">BarClass</span> <span class="k">as</span> <span class="nx">Bar</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">OtherVendor\OtherPackage\BazClass</span><span class="p">;</span>
 
-<span class="cm">/* additional PHP code */</span></code></pre></figure>
+<span class="c1">// ...</span></code></pre></figure>
   </div>
 
 </div>
@@ -2491,12 +2469,12 @@
   <div class="col">
   <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
-<span class="c1">// all good</span>
+<span class="c1">// Good</span>
 <span class="nx">bar</span><span class="p">();</span>
 <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
 <span class="nx">Foo</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
 
-<span class="c1">// also good</span>
+<span class="c1">// Good</span>
 <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span>
     <span class="nv">$longArgument</span><span class="p">,</span>
     <span class="nv">$longerArgument</span><span class="p">,</span>
@@ -2535,17 +2513,17 @@
 
 <span class="c1">// Great</span>
 <span class="k">if</span> <span class="p">(</span><span class="nv">$expr1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// if body</span>
+    <span class="c1">// ...</span>
 <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$expr2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// elseif body</span>
+    <span class="c1">// ...</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="c1">// else body;</span>
+    <span class="c1">// ...</span>
 <span class="p">}</span>
 
 
 <span class="c1">// Terrific</span>
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$iterable</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// foreach body</span>
+    <span class="c1">// ...</span>
 <span class="p">}</span>
 
 <span class="c1">// Superb</span>
@@ -2555,7 +2533,7 @@
         <span class="k">break</span><span class="p">;</span>
     <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
         <span class="k">echo</span> <span class="s1">'Second case, which falls through'</span><span class="p">;</span>
-        <span class="c1">// no break</span>
+        <span class="c1">// No break</span>
     <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
     <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
     <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
@@ -3021,7 +2999,7 @@
   <div class="col">
   <figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">boolean</span><span class="w"> </span><span class="p">%}</span>
   &lt;div class="special-case"&gt;
-    &lt;!-- content --&gt;
+    &lt;!-- ... --&gt;
   &lt;/div&gt;
 <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
   </div>
@@ -3053,18 +3031,18 @@
 
 
   <div class="col">
-  <figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">boolean</span><span class="w"> </span><span class="p">%}</span> &lt;!-- Good --&gt;
-<span class="p">{%</span><span class="kr">if</span><span class="w"> </span><span class="nv">boolean</span><span class="p">%}</span> &lt;!-- Bad --&gt;
-
-&lt;!-- Good --&gt;
-<span class="p">{%</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">string</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'foobar'</span><span class="w"> </span><span class="p">%}</span>
-  <span class="p">{{</span><span class="w"> </span><span class="nv">string</span><span class="w"> </span><span class="p">}}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">%}</span>
+  <figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="kr">if</span><span class="w"> </span><span class="nv">boolean</span><span class="p">%}</span> &lt;!-- Bad --&gt;
+<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">boolean</span><span class="w"> </span><span class="p">%}</span> &lt;!-- Good --&gt;
 
 &lt;!-- Bad --&gt;
 <span class="p">{%</span><span class="kr">unless</span><span class="w"> </span><span class="nv">string</span><span class="o">==</span><span class="s1">'foobar'</span><span class="w"> </span><span class="p">%}</span>
 <span class="p">{{</span><span class="nv">string</span><span class="p">}}</span>
-<span class="p">{%</span><span class="kr">endunless</span><span class="p">%}</span></code></pre></figure>
+<span class="p">{%</span><span class="kr">endunless</span><span class="p">%}</span>
+
+&lt;!-- Good --&gt;
+<span class="p">{%</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">string</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'foobar'</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">string</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
   </div>
 
 </div>
@@ -3092,14 +3070,14 @@
 
 
   <div class="col">
-  <figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">&lt;!-- Good --&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">some_boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="na">some_string</span><span class="w"> </span><span class="p">%}</span>This is a string.<span class="p">{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
-
-&lt;!-- Bad --&gt;
+  <figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">&lt;!-- Bad --&gt;
 <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">some</span><span class="err">-</span><span class="nv">boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">%}</span>
 <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">pleaseNo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">%}</span>
 <span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="na">sillyString</span><span class="w"> </span><span class="p">%}</span>This is a string.<span class="p">{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
+
+&lt;!-- Good --&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">some_boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="na">some_string</span><span class="w"> </span><span class="p">%}</span>This is a string.<span class="p">{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
 
 &lt;!-- Move verbose logic into a variable --&gt;
 <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">slides_class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'no-slides'</span><span class="w"> </span><span class="p">%}</span>

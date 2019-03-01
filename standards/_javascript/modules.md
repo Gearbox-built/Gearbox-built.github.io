@@ -2,7 +2,7 @@
 order: 80
 ---
 
-### Destructuring
+### Modules
 
 * Always use modules (import/export) over a non-standard module system. You can always transpile to your preferred module system.
 * Do not use wildcard imports.

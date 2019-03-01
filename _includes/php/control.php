@@ -2,17 +2,17 @@
 
 // Great
 if ($expr1) {
-    // if body
+    // ...
 } elseif ($expr2) {
-    // elseif body
+    // ...
 } else {
-    // else body;
+    // ...
 }
 
 
 // Terrific
 foreach ($iterable as $key => $value) {
-    // foreach body
+    // ...
 }
 
 // Superb
@@ -22,7 +22,7 @@ switch ($expr) {
         break;
     case 1:
         echo 'Second case, which falls through';
-        // no break
+        // No break
     case 2:
     case 3:
     case 4:

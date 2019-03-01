@@ -1,9 +1,13 @@
-// LITERAL SYNTAX AND RESERVED WORDS
+// LITERAL SYNTAX / OBJECT METHOD SHORTHAND / RESERVED WORDS
 // Bad
 const superman = new Object(
   default: { clark: 'kent' },
   private: true,
   class: 'alien',
+
+  laserEyes: function (target) {
+    return `${target} is real dead`;
+  },
 );
 
 // Good
@@ -11,6 +15,10 @@ const superman = {
   defaults: { clark: 'kent' },
   hidden: true,
   type: 'alien',
+
+  laserEyes(target) {
+    return `${target} is real dead`;
+  },
 };
 
 
@@ -29,26 +37,6 @@ obj[getKey('enabled')] = true;
 const obj = {
   name: 'San Francisco',
   [getKey('enabled')]: true,
-};
-
-
-// OBJECT METHOD SHORTHAND
-// Bad
-const atom = {
-  value: 1,
-
-  addValue: function (value) {
-    return atom.value + value;
-  },
-};
-
-// Good
-const atom = {
-  value: 1,
-
-  addValue(value) {
-    return atom.value + value;
-  },
 };
 
 

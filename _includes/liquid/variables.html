@@ -1,12 +1,12 @@
 {% raw %}
-<!-- Good -->
-{% assign some_boolean = true %}
-{% capture some_string %}This is a string.{% endcapture %}
-
 <!-- Bad -->
 {% assign some-boolean = true %}
 {% assign pleaseNo = true %}
 {% capture sillyString %}This is a string.{% endcapture %}
+
+<!-- Good -->
+{% assign some_boolean = true %}
+{% capture some_string %}This is a string.{% endcapture %}
 
 <!-- Move verbose logic into a variable -->
 {% assign slides_class = 'no-slides' %}

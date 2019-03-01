@@ -1,14 +1,14 @@
 {% raw %}
-{% if boolean %} <!-- Good -->
 {%if boolean%} <!-- Bad -->
-
-<!-- Good -->
-{% unless string == 'foobar' %}
-  {{ string }}
-{% endunless %}
+{% if boolean %} <!-- Good -->
 
 <!-- Bad -->
 {%unless string=='foobar' %}
 {{string}}
 {%endunless%}
+
+<!-- Good -->
+{% unless string == 'foobar' %}
+  {{ string }}
+{% endunless %}
 {% endraw %}

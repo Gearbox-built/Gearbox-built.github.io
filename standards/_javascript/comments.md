@@ -2,7 +2,7 @@
 order: 60
 ---
 
-### Naming Conventions
+### Comments
 
 * Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values.
 * Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
