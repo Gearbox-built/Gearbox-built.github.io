@@ -4,4 +4,12 @@
     <!-- ... -->
   </div>
 {% endif %}
+
+<!-- Bad -->
+<h2>{{ section.settings.subheading }}</h2>
+
+<!-- Good -->
+{%- unless section.settings.subheading == blank -%}
+  <h2>{{ section.settings.subheading }}</h2>
+{%- endunless -%}
 {% endraw %}
