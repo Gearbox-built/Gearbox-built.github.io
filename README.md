@@ -12,11 +12,11 @@ Code Guide is a project for documenting standards for developing flexible, durab
 
 We use Jekyll for the site build process. Thus, Jekyll must be installed globally to make changes.
 
-**Why Jekyll build instead of [GitHub Pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages) build?**
+#### Why Jekyll build instead of [GitHub Pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages) build?
 
 GitHub Pages does not support the use of third-party/custom Jekyll plugins. We leverage a `file_exists` plugin to allow our site build to maintain some amount of magic under the hood.
 
-**Install Jekyll**
+#### Install Jekyll
 
 https://jekyllrb.com/docs/installation/
 
@@ -24,18 +24,18 @@ https://jekyllrb.com/docs/installation/
 
 Before your changes can be reflected and deployed, you must rebuild using Jekyll:
 
-**Switch to master**
+#### Switch to master
 ```
 git checkout master
 git pull origin master
 ```
 
-**Build**
+#### Build
 ```
 jekyll build
 ```
 
-**Deploy**
+#### Deploy
 ```
 git add -A
 git commit -am "Compiled!"
