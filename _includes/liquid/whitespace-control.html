@@ -1,0 +1,11 @@
+{% raw %}
+<!-- Fine, I guess... -->
+{% unless string=='foobar' %}
+  {{ string }}
+{% endunless %}
+
+<!-- Better -->
+{%- unless string == 'foobar' -%}
+  {{ string }}
+{%- endunless -%}
+{% endraw %}
