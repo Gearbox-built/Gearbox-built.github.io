@@ -246,6 +246,8 @@
           
             <li><a href="#liquid-syntax">Syntax</a></li>
           
+            <li><a href="#liquid-whitespace-control">Whitespace Control</a></li>
+          
             <li><a href="#liquid-whitespace">Whitespace</a></li>
           
             <li><a href="#liquid-variables">Variables</a></li>
@@ -2991,6 +2993,7 @@
 <ul>
   <li>Use soft tabs with two spaces—they’re the only way to guarantee code renders the same in any environment.</li>
   <li>Nested elements should be indented once (two spaces).</li>
+  <li>Section variables, component variables, and other potentially optional variables should always be wrapped in a conditional statement.</li>
 </ul>
 
 </div>
@@ -3001,7 +3004,47 @@
   &lt;div class="special-case"&gt;
     &lt;!-- ... --&gt;
   &lt;/div&gt;
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+
+&lt;!-- Bad --&gt;
+&lt;h2&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">section</span><span class="p">.</span><span class="nv">settings</span><span class="p">.</span><span class="nv">subheading</span><span class="w"> </span><span class="p">}}</span>&lt;/h2&gt;
+
+&lt;!-- Good --&gt;
+<span class="p">{%</span><span class="nt">-</span><span class="w"> </span>unless<span class="w"> </span><span class="na">section.settings.subheading</span><span class="w"> </span><span class="o">=</span>=<span class="w"> </span>blank<span class="w"> </span>-<span class="p">%}</span>
+  &lt;h2&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">section</span><span class="p">.</span><span class="nv">settings</span><span class="p">.</span><span class="nv">subheading</span><span class="w"> </span><span class="p">}}</span>&lt;/h2&gt;
+<span class="p">{%</span><span class="nt">-</span><span class="w"> </span>endunless<span class="w"> </span>-<span class="p">%}</span></code></pre></figure>
+  </div>
+
+</div>
+    
+      
+      
+
+
+
+<div class="section" id="liquid-whitespace-control">
+<div class="col">
+  <h3 id="whitespace-control">Whitespace Control</h3>
+
+<p>In Liquid, you can include a hyphen in your tag syntax <code class="highlighter-rouge">{{-</code>, <code class="highlighter-rouge">-}}</code>, <code class="highlighter-rouge">{%-</code>, and <code class="highlighter-rouge">-%}</code> to strip whitespace from the left or right side of a rendered tag.</p>
+
+<ul>
+  <li>As a general rule, always include hyphens in your tag syntax.</li>
+</ul>
+
+</div>
+
+
+  <div class="col">
+  <figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">&lt;!-- Fine, I guess... --&gt;
+<span class="p">{%</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">string</span><span class="o">==</span><span class="s1">'foobar'</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">string</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">%}</span>
+
+&lt;!-- Better --&gt;
+<span class="p">{%</span><span class="nt">-</span><span class="w"> </span>unless<span class="w"> </span><span class="na">string</span><span class="w"> </span><span class="o">=</span>=<span class="w"> </span><span class="s1">'foobar'</span><span class="w"> </span>-<span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">string</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="nt">-</span><span class="w"> </span>endunless<span class="w"> </span>-<span class="p">%}</span></code></pre></figure>
   </div>
 
 </div>
